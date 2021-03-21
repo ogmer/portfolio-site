@@ -1,1 +1,1 @@
-#vue.js modal size
+・vue.js modal size
