@@ -22,7 +22,7 @@ body {
   
   a:hover {
     color: deeppink;
-    transition-duration: 2s;
+    transition-duration: 1s;
   }
   
   .bold > a {
