@@ -11,7 +11,7 @@
   <body>
       <div id="app1">
         <a class="button" v-on:click="show">Skill</a>
-        <modal name="modal-1" :adaptable="true" :draggable="true" :resizable="true">
+        <modal name="modal-1" :adaptable="true">
           <div class="modal-inner">
             <h1>Skill</h1>
             <h2>Languages: C++, Python</h2>
@@ -24,7 +24,7 @@
 
       <div id="app2">
         <a class="button" v-on:click="show">about</a>
-        <modal name="modal-2" :adaptive="true" :draggable="true" :resizable="true">
+        <modal name="modal-2" :adaptive="true">
           <div class="modal-inner">
             <h1>About</h1>
             <p>1995年生まれ25歳</p>
@@ -36,7 +36,7 @@
 
       <div id="app3">
         <a class="button" v-on:click="show">Link</a>
-        <modal name="modal-3" :adaptable="true" :draggable="true" :resizable="true">
+        <modal name="modal-3" :adaptable="true">
           <div class="modal-inner">
             <h1>Link</h1>
             <div class="bold">
@@ -50,7 +50,7 @@
 
       <div id="app4">
         <a class="button" v-on:click="show">contact</a>
-        <modal name="modal-4" :adaptable="true" :draggable="true" :resizable="true">
+        <modal name="modal-4" :adaptable="true" :delay="6">
           <div class="modal-inner">
             <h1>Contact</h1>
             <p>watershed〔at〕keemail.me</p>
