@@ -48,6 +48,10 @@ body {
     font-size: 17px;
     line-height: 2.5em;
   }
+
+  #app2 h2 {
+    font-size: 18px;
+  }
   
   .modal-inner {
     padding: 10px;
