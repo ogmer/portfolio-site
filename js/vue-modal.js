@@ -1,8 +1,8 @@
 Vue.use(window["vue-js-modal"].default);
 
 window.onload = function() {
-  const spinner = document.getElementById('loading');
-  spinner.classList.add('loaded');
+  const loader = document.getElementById('loading');
+  loader.classList.add('loaded');
 }
 
 var app = new Vue({
