@@ -1,11 +1,15 @@
 #loading {
-  width: 100%;
-  height: 100%;
-  transition: all 1s;
-  background-color: #0bd;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: #0bd; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  transition: all 2s; 
   z-index: 9999;
 }
 
