@@ -1,65 +1,28 @@
 body {
   background: #77a9eb;
-  font-family: Segoe UI;
+  font-family: 'Segoe UI' ,sans-serif;
   color: #f1f3fc;
   letter-spacing: 0.08em;
   font-weight: 500;
-}
-
-.container {
-  display: flex;
-  align-items: stretch;
-  margin: 0;
-  padding: 0;
-}
-
-.contents {
-  flex: 1;
-  font-size: 24px;
-  line-height: 1.9em;
-  color: azure;
-  margin-top: 100px;
-  text-align: center;
-  background: #77a9eb;
-  text-decoration-color: #f1f3fc;
-  padding-bottom: 2px;
-}
-
-.right {
-  width: 300px;
-  margin-top: 160px;
-  margin-left: 150px;
-  font-size: 30px;
   line-height: 2.2em;
   text-align: center;
-  background: #77a9eb;
-}
-
-#footer {
-  align-items: flex-end;
+  padding: 0;
+  margin-top: 180px;
+  font-size: 27px;
 }
 
 a {
+  text-decoration: none;
+  font-weight: 650;
+
   &:link {
     color: aliceblue;
   }
 
   &:hover {
     color: deeppink;
+    transition-duration: 0.45s;
   }
-
-  text-decoration: none;
-  font-weight: 650;
-}
-
-h1 {
-  font-size: 35px;
-  text-decoration: none;
-  color: #f39c06;
-}
-
-p {
-  font-weight: bold;
 }
 
 .bold > a {
@@ -68,14 +31,52 @@ p {
   text-decoration: underline;
 }
 
-.modal-area-inner {
-  padding: 10px;
-  box-sizing: border-box;
-  position: relative;
-  color: rgb(115, 193, 241);
-  font-size: 20px;
+h1 {
+  font-size: 35px;
+  text-decoration: none;
+  color: #f39c06;
 }
 
 h2 {
   font-size: 20px;
+}
+
+p {
+  font-weight: bold;
+}
+
+#app1 h2 {
+  font-size: 17px;
+  line-height: 2.5em;
+}
+
+#app2 h2 {
+  font-size: 18px;
+}
+
+.modal-inner {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  color: rgb(115, 193, 241);
+  font-size: 21px;
+}
+
+/*　タブレット 　*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    margin-top: 160px;
+    margin-left: 190px;
+    margin-right: 200px;
+    font-size: 40px;
+  }
+}
+
+/*　for PC　*/
+@media screen and (min-width: 1024px) {
+  body {
+    margin-top: 160px;
+    margin-left: 890px;
+    font-size: 30px;
+  }
 }
