@@ -1,10 +1,4 @@
 /* common-style */
-
-@font-face {
-  font-family: "Pommel";
-  src: url(../../font/Pommel.ttf);
-}
-
 html,
 body {
   width: 100%;
