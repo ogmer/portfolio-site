@@ -147,7 +147,7 @@ small {
 @media screen and (max-width: 768px) {
   /* sp-style */
   .menu {
-    margin-top: 40px;
+    padding-top: 40px;
     text-align: center;
   }
 }
