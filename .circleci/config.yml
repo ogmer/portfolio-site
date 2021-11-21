@@ -20,11 +20,11 @@ jobs:
       - run:
           name: Run Tests
           command: npm run test
+      - run: yarn lint
+      - run: yarn build
+      - run: yarn e2e
 
 workflows:
   orb-free-workflow:
     jobs:
       - test
-      - run: yarn lint
-      - run: yarn build
-      - run: yarn e2e
