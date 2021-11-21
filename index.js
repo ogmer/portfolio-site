@@ -25,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
 Vue.use(window["vue-js-modal"].default);
 
  
@@ -75,3 +76,30 @@ var app = new Vue({
         },
     },
 });
+
+/*
+
+$(Window).ready(function(){
+  var section = $(".cherry-blossom");
+
+  var createsakura = $(function() {
+    var sakuraEl = $("<span>");
+    sakuraEl.className = "sakura";
+    var minSize = 10,
+    maxSize = 15,
+    size = Math.random() * (maxSize + 1 - minSize) + minSize;
+    sakuraEl.width(size);
+    sakuraEl.height(size);
+    sakuraEl.css("left", Math.random() * innerWidth + 'px');
+    section.append("sakuraEl");
+
+    setTimeout(function(){
+      sakuraEl.remove();
+    }, 10000);
+    
+  });
+
+  setInterval(createsakura, 300);
+});
+
+*/
