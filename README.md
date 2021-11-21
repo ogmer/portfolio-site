@@ -4,4 +4,4 @@ deploy by Netlify
 
 https://kumagai.netlify.app/
 
-![スクリーンショット (3)](https://user-images.githubusercontent.com/52206772/104537558-877d1180-565d-11eb-995d-44c5a5a8ed3d.png)
+![2040213](https://user-images.githubusercontent.com/52206772/142750257-955b8f77-5913-472d-adbb-25619d58639b.png)
