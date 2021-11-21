@@ -1,82 +1,130 @@
-body {
-  background: #77a9eb;
-  font-family: 'Segoe UI' ,sans-serif;
-  color: #f1f3fc;
-  letter-spacing: 0.08em;
-  font-weight: 500;
-  line-height: 2.2em;
-  text-align: center;
-  padding: 0;
-  margin-top: 180px;
-  font-size: 27px;
-}
+@font-face
+  font-family: Pommel
+  src: url(font/Pommel.ttf)
 
-a {
-  text-decoration: none;
-  font-weight: 650;
+body, html
+  background: #77a9eb
+  height: 100%
+  overflow-x: hidden
+  overflow-y: hidden
+  user-select: none
+  width: 100%
 
-  &:link {
-    color: aliceblue;
-  }
+a
+  color: #f1f3fc
+  font-family: Segoe UI,sans-serif
+  font-size: 27px
+  font-weight: 650
+  letter-spacing: .08em
+  line-height: 2.2em
+  text-decoration: none
 
-  &:hover {
-    color: deeppink;
-    transition-duration: 0.45s;
-  }
-}
+  &:hover
+    color: #ff1493
+    transition-duration: .45s
 
-.bold > a {
-  font-weight: bold;
-  color: #2ecc71;
-  text-decoration: underline;
-}
+.bold
+  margin-top: 25px
 
-h1 {
-  font-size: 35px;
-  text-decoration: none;
-  color: #f39c06;
-}
+  > a
+    color: #2ecc71
+    font-weight: 700
+    margin-left: 20px
+    text-decoration: underline
 
-h2 {
-  font-size: 20px;
-}
+    &:first-child
+      margin-left: 0
 
-p {
-  font-weight: bold;
-}
+h1
+  color: #f39c06
+  font-size: 30px
+  text-decoration: none
 
-#app1 h2 {
-  font-size: 17px;
-  line-height: 2.5em;
-}
+h2
+  font-size: 20px
 
-#app2 h2 {
-  font-size: 18px;
-}
+p
+  font-weight: 700
 
-.modal-inner {
-  padding: 10px;
-  box-sizing: border-box;
-  position: relative;
-  color: rgb(115, 193, 241);
-  font-size: 21px;
-}
+#app1 h2
+  font-size: 17px
+  line-height: 2.5em
 
-/*　タブレット 　*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    margin-top: 160px;
-    margin-left: 190px;
-    margin-right: 200px;
-    font-size: 40px;
-  }
-}
+#app2 h2
+  font-size: 18px
 
-/*　for PC　*/
-@media screen and (min-width: 1024px) {
-  body {
-    margin-top: 160px;
-    margin-left: 890px;
-    font-size: 30px;
-  }
-}
+#app4 h2
+  margin-top: 50px
+
+.modal-inner
+  box-sizing: border-box
+  color: #73c1f1
+  font-size: 15px
+  padding: 10px
+  position: relative
+  text-align: center
+
+footer
+  bottom: 0
+  height: 60px
+  padding-bottom: 10px
+  padding-left: 30px
+  position: fixed
+
+small
+  color: #fff
+  font-family: Pommel
+  font-size: 32px
+
+.cherry-blossom
+  height: 100%
+  overflow: hidden
+  position: relative
+  width: 100%
+
+.sakura
+  animation: animate-sakura 10s linear
+  background-color: pink
+  border-radius: 150% 0 150% 0
+  position: absolute
+
+  &:after
+    background-color: pink
+    border-radius: 150% 0 150% 0
+    position: absolute
+    content: ""
+    display: block
+    height: 100%
+    left: -10%
+    top: -14%
+    transform: rotate(15deg)
+    width: 100%
+
+@keyframes animate-sakura
+  0%
+    opacity: 0
+    top: 0
+    transform: rotate(0deg)
+
+  10%
+    opacity: 1
+
+  90%
+    opacity: 1
+
+  to
+    opacity: 0
+    top: 100vh
+    transform: rotate(3000deg)
+
+@media screen and (min-width: 1024px)
+  .menu
+    position: absolute
+    right: 200px
+    text-align: center
+    top: 150px
+
+@media screen and (max-width: 768px)
+  .menu
+    padding-top: 40px
+    text-align: center
