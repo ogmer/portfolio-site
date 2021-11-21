@@ -17,9 +17,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - ~/.npm
-      - run: yarn lint
-      - run: yarn build
-      - run: yarn e2e
 
 workflows:
   orb-free-workflow:
