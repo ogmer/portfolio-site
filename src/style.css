@@ -141,7 +141,7 @@ small {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
   /* pc,tab-style */
   .menu {
     text-align: center;
