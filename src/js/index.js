@@ -1,7 +1,5 @@
 "use strict";
 
-import VModal from 'vue-js-modal'
-
 window.addEventListener('DOMContentLoaded', () => {
 
   const section = document.querySelector('.cherry-blossom');
@@ -27,7 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
- 
+import VModal from 'vue-js-modal' 
+
 var app = new Vue({
   el: "#app1",
   methods: {
