@@ -1,5 +1,7 @@
 "use strict";
 
+import VModal from 'vue-js-modal'
+
 window.addEventListener('DOMContentLoaded', () => {
 
   const section = document.querySelector('.cherry-blossom');
@@ -24,9 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
   setInterval(createsakura, 300);
 
 });
-
-
-Vue.use(window["vue-js-modal"].default);
 
  
 var app = new Vue({
