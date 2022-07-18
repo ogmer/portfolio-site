@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-import VModal from 'vue-js-modal' 
+Vue.use(window["vue-js-modal"].default);
 
 var app = new Vue({
   el: "#app1",
