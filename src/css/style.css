@@ -86,7 +86,7 @@ footer {
   bottom: 0;
   height: 60px;
   padding-left: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 small {
@@ -156,5 +156,8 @@ small {
   .menu {
     padding-top: 40px;
     text-align: center;
+  }
+  footer {
+  padding-bottom: 20px;
   }
 }
