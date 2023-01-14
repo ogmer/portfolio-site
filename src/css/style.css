@@ -14,10 +14,6 @@ body {
   user-select: none;
 }
 
-menu {
-  display: none;
-}
-
 a {
   text-decoration: none;
   font-family: "Segoe UI", sans-serif;
@@ -83,6 +79,7 @@ p {
   position: relative;
   font-size: 15px;
   color: rgb(115, 193, 241);
+  display: none;
 }
 
 footer {
