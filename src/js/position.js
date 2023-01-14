@@ -1,3 +1,3 @@
 $(function() {
-    $('modal-inner').fadeIn(0);
+    $('.modal-inner').fadeIn(0);
 });
