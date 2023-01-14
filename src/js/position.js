@@ -1,3 +1,3 @@
 $(function() {
-    $('menu').fadeIn(0);
+    $('menu').fadeIn(1000);
 });
