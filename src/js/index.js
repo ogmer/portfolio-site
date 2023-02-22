@@ -25,13 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });　*/
 
-<template>
-  <div class="cherry-blossom">
-    <span v-for="sakura in sakuraList" :key="sakura.id" class="sakura" :style="{ width: sakura.size + 'px', height: sakura.size + 'px', left: sakura.left + 'px' }"></span>
-  </div>
-</template>
-
-<script>
 export default {
   data() {
     return {
@@ -56,7 +49,6 @@ export default {
     }
   }
 };
-</script>
 
 Vue.use(window["vue-js-modal"].default);
 
