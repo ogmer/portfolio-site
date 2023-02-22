@@ -25,31 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-export default {
-  data() {
-    return {
-      sakuraList: []
-    };
-  },
-  mounted() {
-    setInterval(this.createSakura, 300);
-  },
-  methods: {
-    createSakura() {
-      const minSize = 10;
-      const maxSize = 15;
-      const size = Math.random() * (maxSize + 1 - minSize) + minSize;
-      const left = Math.random() * window.innerWidth;
-      const id = Date.now() + Math.random().toString(36).substr(2, 9);
-      this.sakuraList.push({ id, size, left });
-
-      setTimeout(() => {
-        this.sakuraList = this.sakuraList.filter(sakura => sakura.id !== id);
-      }, 10000);
-    }
-  }
-};
-
 Vue.use(window["vue-js-modal"].default);
 
 var app = new Vue({
