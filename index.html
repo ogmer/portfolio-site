@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,38 +12,57 @@
   </head>
   <body>
     <div class="cherry-blossom">
-    <div id="app">
-        <button @click="show('modal-1')">About</button>
-        <button @click="show('modal-2')">Skill</button>
-        <button @click="show('modal-3')">Link</button>
-        <button @click="show('modal-4')">Contact</button>
-
-        <modal name="modal-1">
+      <main class="menu">
+        <div id="app1">
+          <a class="button" v-on:click="show">About</a>
+          <modal name="modal-1" :adaptive="true" :delay="368">
+            <div class="modal-inner">
               <h1>About</h1>
               <br>
-              <p>横浜出身。東京在住。都内企業に勤めてます</p>
+              <p>横浜出身。都内企業に勤めてます</p>
               <p>趣味はバイクをいじったりDIYをすることです</p>
-        </modal>
-        <modal name="modal-2">
+              <span class="hide" v-on:click="hide"></span>
+            </div>
+          </modal>
+        </div>
+        <div id="app2">
+          <a class="button" v-on:click="show">Skill</a>
+          <modal name="modal-2" :adaptive="true" :delay="368">
+            <div class="modal-inner">
               <h1>Skill</h1>
-              <h2>Languages: C++, Python, shell</h2>
+              <h2>Languages: Python, C++, shell</h2>
               <h2>This Site: HTML/CSS/SASS/Vue.js/</h2>
               <h2>webpack/Netlify/CircleCI</h2>
-        </modal>
-        <modal name="modal-3">
+              <span class="hide" v-on:click="hide"></span>
+            </div>
+          </modal>
+        </div>
+        <div id="app3">
+          <a class="button" v-on:click="show">Link</a>
+          <modal name="modal-3" :adaptive="true" :delay="368">
+            <div class="modal-inner">
               <h1>Link</h1>
               <div class="bold">
                 <a href="https://github.com/ogmer">GitHub</a>
                 <a href="https://qiita.com/ogmer">Qiita</a>
               </div>
-        </modal>
-        <modal name="modal-4">
+              <span class="hide" v-on:click="hide"></span>
+            </div>
+          </modal>
+        </div>
+        <div id="app4">
+          <a class="button" v-on:click="show">contact</a>
+          <modal name="modal-4" :adaptive="true" :delay="368">
+            <div class="modal-inner">
               <h1>Contact</h1>
               <h2>ogmer.net〔at〕gmail.com</h2>
-        </modal>
+              <span class="hide" v-on:click="hide"></span>
+            </div>
+          </modal>
+        </div>
       </main>
       <footer>
-        <small>made by Ogmer</small>
+        <small>made by ogmer</small>
       </footer>
     </div>
     <--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
