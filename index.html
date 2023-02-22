@@ -10,7 +10,11 @@
     <title>mysite</title>
   </head>
   <body>
-    <div class="cherry-blossom">
+      <template>
+        <div class="cherry-blossom">
+          <span v-for="sakura in sakuraList" :key="sakura.id" class="sakura" :style="{ width: sakura.size + 'px', height: sakura.size + 'px', left: sakura.left + 'px' }"></span>
+        </div>
+      </template>
       <main class="menu">
         <div id="app1">
           <a class="button" v-on:click="show">About</a>
