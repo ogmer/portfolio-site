@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -23,7 +23,40 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setInterval(createsakura, 300);
 
-});
+});　*/
+
+<template>
+  <div class="cherry-blossom">
+    <span v-for="sakura in sakuraList" :key="sakura.id" class="sakura" :style="{ width: sakura.size + 'px', height: sakura.size + 'px', left: sakura.left + 'px' }"></span>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      sakuraList: []
+    };
+  },
+  mounted() {
+    setInterval(this.createSakura, 300);
+  },
+  methods: {
+    createSakura() {
+      const minSize = 10;
+      const maxSize = 15;
+      const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+      const left = Math.random() * window.innerWidth;
+      const id = Date.now() + Math.random().toString(36).substr(2, 9);
+      this.sakuraList.push({ id, size, left });
+
+      setTimeout(() => {
+        this.sakuraList = this.sakuraList.filter(sakura => sakura.id !== id);
+      }, 10000);
+    }
+  }
+};
+</script>
 
 Vue.use(window["vue-js-modal"].default);
 
