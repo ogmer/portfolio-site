@@ -108,7 +108,9 @@ var app = new Vue({
     },
 });
 
-/* $(Window).ready(function(){
+/* 
+
+$(Window).ready(function(){
   var section = $(".cherry-blossom");
 
   var createsakura = $(function() {
@@ -129,4 +131,6 @@ var app = new Vue({
   });
 
   setInterval(createsakura, 300);
-}); */
+}); 
+
+*/
