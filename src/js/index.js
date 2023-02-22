@@ -1,7 +1,5 @@
 "use strict";
 
-/* 
-
 window.addEventListener('DOMContentLoaded', () => {
 
   const section = document.querySelector('.cherry-blossom');
@@ -25,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setInterval(createsakura, 300);
 
-});　*/
+});
 
 export default {
   data() {
