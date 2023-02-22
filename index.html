@@ -10,55 +10,36 @@
     <title>mysite</title>
   </head>
   <body>
-      <div class="cherry-blossom">
-      <main class="menu">
-        <div id="app1">
-          <a class="button" v-on:click="show">About</a>
-          <modal name="modal-1" :adaptive="true" :delay="368">
-            <div class="modal-inner">
+    <div class="cherry-blossom">
+    <div id="app">
+        <button @click="show('modal-1')">About</button>
+        <button @click="show('modal-2')">Skill</button>
+        <button @click="show('modal-3')">Link</button>
+        <button @click="show('modal-4')">Contact</button>
+
+        <modal name="modal-1">
               <h1>About</h1>
               <br>
               <p>横浜出身。東京在住。都内企業に勤めてます</p>
               <p>趣味はバイクをいじったりDIYをすることです</p>
-              <span class="hide" v-on:click="hide"></span>
-            </div>
-          </modal>
-        </div>
-        <div id="app2">
-          <a class="button" v-on:click="show">Skill</a>
-          <modal name="modal-2" :adaptive="true" :delay="368">
-            <div class="modal-inner">
+        </modal>
+        <modal name="modal-2">
               <h1>Skill</h1>
               <h2>Languages: C++, Python, shell</h2>
               <h2>This Site: HTML/CSS/SASS/Vue.js/</h2>
               <h2>webpack/Netlify/CircleCI</h2>
-              <span class="hide" v-on:click="hide"></span>
-            </div>
-          </modal>
-        </div>
-        <div id="app3">
-          <a class="button" v-on:click="show">Link</a>
-          <modal name="modal-3" :adaptive="true" :delay="368">
-            <div class="modal-inner">
+        </modal>
+        <modal name="modal-3">
               <h1>Link</h1>
               <div class="bold">
                 <a href="https://github.com/ogmer">GitHub</a>
                 <a href="https://qiita.com/ogmer">Qiita</a>
               </div>
-              <span class="hide" v-on:click="hide"></span>
-            </div>
-          </modal>
-        </div>
-        <div id="app4">
-          <a class="button" v-on:click="show">contact</a>
-          <modal name="modal-4" :adaptive="true" :delay="368">
-            <div class="modal-inner">
+        </modal>
+        <modal name="modal-4">
               <h1>Contact</h1>
               <h2>ogmer.net〔at〕gmail.com</h2>
-              <span class="hide" v-on:click="hide"></span>
-            </div>
-          </modal>
-        </div>
+        </modal>
       </main>
       <footer>
         <small>made by Ogmer</small>
