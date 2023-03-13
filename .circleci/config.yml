@@ -21,3 +21,4 @@ workflows:
   orb-free-workflow:
     jobs:
       - test
+
