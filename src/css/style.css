@@ -38,7 +38,7 @@ a:hover {
   color: #2ecc71;
   font-size: 24px;
   text-decoration: underline;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .bold > a:first-child {
@@ -77,7 +77,7 @@ p {
   padding: 10px;
   box-sizing: border-box;
   position: relative;
-  font-size: 15px;
+  font-size: 18px;
   color: rgb(115, 193, 241);
 }
 
