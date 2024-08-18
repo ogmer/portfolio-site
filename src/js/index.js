@@ -21,7 +21,7 @@ $(document).ready(() => {
       width: `${size}px`,
       height: `${size}px`,
       left: `${positionX}px`,
-      top: `${positionY}px`
+      top: `${positionY}px`,
     });
 
     $section.append($sakuraEl);
@@ -54,8 +54,8 @@ const createVueInstance = (selector, modalId) => {
       },
       hide() {
         this.$modal.hide(modalId);
-      }
-    }
+      },
+    },
   });
 };
 
@@ -64,8 +64,10 @@ const modalConfigs = [
   { selector: "#app1", modalId: "modal-1" },
   { selector: "#app2", modalId: "modal-2" },
   { selector: "#app3", modalId: "modal-3" },
-  { selector: "#app4", modalId: "modal-4" }
+  { selector: "#app4", modalId: "modal-4" },
 ];
 
 // Create Vue instances for each modal
-modalConfigs.forEach(({ selector, modalId }) => createVueInstance(selector, modalId));
+modalConfigs.forEach(({ selector, modalId }) =>
+  createVueInstance(selector, modalId),
+);
