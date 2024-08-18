@@ -1,7 +1,7 @@
 
 # ogmer portfolio site
 
-deploy by Netlify
+deploy by Netlify, Vercel
 
 https://ogmer.netlify.app/
 <br>alt: https://ogmer.vercel.app/
