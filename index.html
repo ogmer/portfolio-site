@@ -2,14 +2,20 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Put your description here." />
+    <title>My Site</title>
+
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="src/img/sakura.webp"
       type="image/png"
-      sizes="16×16"
+      sizes="16x16"
     />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="src/css/style.css" />
     <link
       rel="preload"
@@ -18,53 +24,68 @@
       type="font/woff2"
       crossorigin
     />
-    <title>mysite</title>
-    <meta name="description" content="Put your description here." />
-    <script src="https://google.com/path/jsonp?callback=alert(document.domain)//"></script>
   </head>
+
   <body>
     <div class="cherry-blossom">
       <main class="menu">
+        <!-- App 1 -->
         <div id="app1">
           <a class="button" v-on:click="show">About</a>
           <modal name="modal-1" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>About</h1>
-              <br />
               <p>横浜出身。東京にて暮らしてます</p>
               <p>趣味はバイクをいじったりDIYをすることです</p>
               <span class="hide" v-on:click="hide"></span>
             </div>
           </modal>
         </div>
+        <!-- App 2 -->
         <div id="app2">
           <a class="button" v-on:click="show">Skill</a>
           <modal name="modal-2" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>Skill</h1>
               <h2>Languages: C++, Java</h2>
-              <br />
               <h2>This Site: HTML/CSS/Vue.js/Netlify</h2>
               <span class="hide" v-on:click="hide"></span>
             </div>
           </modal>
         </div>
+        <!-- App 3 -->
         <div id="app3">
           <a class="button" v-on:click="show">Link</a>
           <modal name="modal-3" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>Link</h1>
               <div class="bold">
-                <a href="https://github.com/ogmer">GitHub</a>
-                <a href="https://qiita.com/ogmer">Qiita</a>
-                <a href="https://zenn.dev/ogmer">Zenn</a>
+                <a
+                  href="https://github.com/ogmer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+                <a
+                  href="https://qiita.com/ogmer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Qiita</a
+                >
+                <a
+                  href="https://zenn.dev/ogmer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Zenn</a
+                >
               </div>
               <span class="hide" v-on:click="hide"></span>
             </div>
           </modal>
         </div>
+        <!-- App 4 -->
         <div id="app4">
-          <a class="button" v-on:click="show">contact</a>
+          <a class="button" v-on:click="show">Contact</a>
           <modal name="modal-4" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>Contact</h1>
@@ -75,11 +96,14 @@
         </div>
       </main>
       <footer>
-        <small>made by ogmer</small>
+        <small>Made by ogmer</small>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue-js-modal@1.3.34/dist/index.min.js"></script>
+
+    <!-- Load scripts at the end to improve page load time -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.9/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-js-modal@1.3.35/dist/index.min.js"></script>
     <script src="src/js/index.js"></script>
   </body>
 </html>

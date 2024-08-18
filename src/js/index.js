@@ -1,73 +1,71 @@
 "use strict";
 
-window.addEventListener("DOMContentLoaded", () => {
-  const section = document.querySelector(".cherry-blossom");
+// jQuery cherry blossom effect
+$(document).ready(() => {
+  const $section = $(".cherry-blossom");
 
-  const createsakura = () => {
-    const sakuraEl = document.createElement("span");
-    sakuraEl.className = "sakura";
+  /**
+   * Creates and appends a sakura element to the section.
+   */
+  const createSakura = () => {
+    const $sakuraEl = $('<span class="sakura"></span>');
     const minSize = 10;
     const maxSize = 15;
-    const size = Math.random() * (maxSize + 1 - minSize) + minSize;
-    sakuraEl.style.width = `${size}px`;
-    sakuraEl.style.height = `${size}px`;
-    sakuraEl.style.left = Math.random() * innerWidth + "px";
-    section.appendChild(sakuraEl);
+    const size = Math.random() * (maxSize - minSize) + minSize;
 
+    // Calculate random positions
+    const positionX = Math.random() * $(window).width();
+    const positionY = Math.random() * $(window).height();
+
+    $sakuraEl.css({
+      width: `${size}px`,
+      height: `${size}px`,
+      left: `${positionX}px`,
+      top: `${positionY}px`
+    });
+
+    $section.append($sakuraEl);
+
+    // Remove the sakura element after 10 seconds
     setTimeout(() => {
-      sakuraEl.remove();
+      $sakuraEl.remove();
     }, 10000);
   };
 
-  setInterval(createsakura, 300);
+  // Create sakura elements at regular intervals
+  setInterval(createSakura, 300);
 });
 
+// Vue.js modal management
 Vue.use(window["vue-js-modal"].default);
 
-var app = new Vue({
-  el: "#app1",
-  methods: {
-    show: function () {
-      this.$modal.show("modal-1");
-    },
-    hide: function () {
-      this.$modal.hide("modal-1");
-    },
-  },
-});
+/**
+ * Creates and returns a Vue instance for a specified modal.
+ * @param {string} selector - The element selector for the Vue instance.
+ * @param {string} modalId - The ID of the modal to manage.
+ * @returns {Vue} The created Vue instance.
+ */
+const createVueInstance = (selector, modalId) => {
+  return new Vue({
+    el: selector,
+    methods: {
+      show() {
+        this.$modal.show(modalId);
+      },
+      hide() {
+        this.$modal.hide(modalId);
+      }
+    }
+  });
+};
 
-var app = new Vue({
-  el: "#app2",
-  methods: {
-    show: function () {
-      this.$modal.show("modal-2");
-    },
-    hide: function () {
-      this.$modal.hide("modal-2");
-    },
-  },
-});
+// Modal configurations
+const modalConfigs = [
+  { selector: "#app1", modalId: "modal-1" },
+  { selector: "#app2", modalId: "modal-2" },
+  { selector: "#app3", modalId: "modal-3" },
+  { selector: "#app4", modalId: "modal-4" }
+];
 
-var app = new Vue({
-  el: "#app3",
-  methods: {
-    show: function () {
-      this.$modal.show("modal-3");
-    },
-    hide: function () {
-      this.$modal.hide("modal-3");
-    },
-  },
-});
-
-var app = new Vue({
-  el: "#app4",
-  methods: {
-    show: function () {
-      this.$modal.show("modal-4");
-    },
-    hide: function () {
-      this.$modal.hide("modal-4");
-    },
-  },
-});
+// Create Vue instances for each modal
+modalConfigs.forEach(({ selector, modalId }) => createVueInstance(selector, modalId));
