@@ -4,8 +4,8 @@
   "description": "ポートフォリオサイト",
   "main": "src/js/index.js",
   "scripts": {
-    "lint": "eslint .",
-    "format": "prettier --write .",
+    "lint": "eslint src/js --fix",
+    "format": "prettier --write src/**/*.{js,css,html}",
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
     "deploy": "bash deploy.sh"
