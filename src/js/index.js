@@ -40,12 +40,14 @@ $(document).ready(() => {
 // Modal management
 Vue.use(window["vue-js-modal"].default);
 
-const createVueInstance = (selector, modalId) => new Vue({
-  el: selector,
-  methods: { 
-    show() { this.$modal.show(modalId); },
-    hide() { this.$modal.hide(modalId); }
-  }
+new Vue({
+  el: ".menu",
+  methods: {
+    show(modalId) {
+      this.$modal.show(modalId);
+    },
+    hide(modalId) {
+      this.$modal.hide(modalId);
+    },
+  },
 });
-
-MODAL_CONFIGS.forEach(({ selector, modalId }) => createVueInstance(selector, modalId));

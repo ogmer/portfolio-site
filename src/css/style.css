@@ -153,6 +153,8 @@ small {
   }
 }
 
+/* Media Queries */
+/* Desktop and Tablet */
 @media screen and (min-width: 769px) {
   /* pc,tab-style */
   .menu {
@@ -163,6 +165,7 @@ small {
   }
 }
 
+/* Mobile */
 @media screen and (max-width: 768px) {
   /* sp-style */
   .menu {

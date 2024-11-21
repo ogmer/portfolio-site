@@ -31,32 +31,32 @@
       <main class="menu">
         <!-- App 1 -->
         <div id="app1">
-          <a class="button" v-on:click="show">About</a>
+          <a class="button" v-on:click="show('modal-1')">About</a>
           <modal name="modal-1" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>About</h1>
               <p>東京にて暮らしてます</p>
               <p>趣味はバイクをいじったりDIYをすることです</p>
-              <span class="hide" v-on:click="hide"></span>
+              <span class="hide" v-on:click="hide('modal-1')"></span>
             </div>
           </modal>
         </div>
         <!-- App 2 -->
         <div id="app2">
-          <a class="button" v-on:click="show">Skill</a>
+          <a class="button" v-on:click="show('modal-2')">Skill</a>
           <modal name="modal-2" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>Skill</h1>
               <h2>得意言語: Java, C++</h2>
               <h2>扱える言語:Python JavaScript, SQL</h2>
               <h2>本業のバックエンドと<br>趣味でフロントエンド・アプリ開発をやっています</h2>
-              <span class="hide" v-on:click="hide"></span>
+              <span class="hide" v-on:click="hide('modal-2')"></span>
             </div>
           </modal>
         </div>
         <!-- App 3 -->
         <div id="app3">
-          <a class="button" v-on:click="show">Link</a>
+          <a class="button" v-on:click="show('modal-3')">Link</a>
           <modal name="modal-3" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>Link</h1>
@@ -80,18 +80,18 @@
                   >Zenn</a
                 >
               </div>
-              <span class="hide" v-on:click="hide"></span>
+              <span class="hide" v-on:click="hide('modal-3')"></span>
             </div>
           </modal>
         </div>
         <!-- App 4 -->
         <div id="app4">
-          <a class="button" v-on:click="show">Contact</a>
+          <a class="button" v-on:click="show('modal-4')">Contact</a>
           <modal name="modal-4" :adaptive="true" :delay="368">
             <div class="modal-inner">
               <h1>Contact</h1>
               <h2>ogmer.net〔at〕gmail.com</h2>
-              <span class="hide" v-on:click="hide"></span>
+              <span class="hide" v-on:click="hide('modal-4')"></span>
             </div>
           </modal>
         </div>
