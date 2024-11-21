@@ -156,7 +156,6 @@ small {
 /* Media Queries */
 /* Desktop and Tablet */
 @media screen and (min-width: 769px) {
-  /* pc,tab-style */
   .menu {
     text-align: center;
     position: absolute;
@@ -167,7 +166,6 @@ small {
 
 /* Mobile */
 @media screen and (max-width: 768px) {
-  /* sp-style */
   .menu {
     padding-top: 40px;
     text-align: center;
