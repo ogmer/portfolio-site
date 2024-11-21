@@ -1,4 +1,13 @@
-@charaset "utf-8";
+@charset "utf-8";
+
+:root {
+  --primary-color: #77a9eb;
+  --text-color: #f1f3fc;
+  --link-color: #2ecc71;
+  --heading-color: #f39c06;
+  --sakura-color: #ffc0cb;
+  --animation-duration: 0.45s;
+}
 
 /* common-style */
 @font-face {
@@ -10,7 +19,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #77a9eb;
+  background: var(--primary-color);
   overflow-x: hidden;
   overflow-y: hidden;
   user-select: none;
@@ -23,12 +32,12 @@ a {
   font-weight: 650;
   line-height: 2.2em;
   letter-spacing: 0.08em;
-  color: #f1f3fc;
+  color: var(--text-color);
+  transition: color var(--animation-duration) ease;
 }
 
 a:hover {
   color: deeppink;
-  transition-duration: 0.45s;
 }
 
 .bold {
@@ -36,7 +45,7 @@ a:hover {
 }
 
 .bold > a {
-  color: #2ecc71;
+  color: var(--link-color);
   font-size: 24px;
   text-decoration: underline;
   margin-left: 30px;
@@ -49,7 +58,7 @@ a:hover {
 h1 {
   font-size: 30px;
   text-decoration: none;
-  color: #f39c06;
+  color: var(--heading-color);
   margin-bottom: 35px;
 }
 
@@ -106,9 +115,10 @@ small {
 
 .sakura {
   position: absolute;
-  background-color: #ffc0cb;
+  background-color: var(--sakura-color);
   border-radius: 150% 0 150% 0;
   animation: animate-sakura 10s linear;
+  will-change: transform, opacity;
 }
 
 .sakura::after {
@@ -119,7 +129,7 @@ small {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #ffc0cb;
+  background-color: var(--sakura-color);
   border-radius: 150% 0 150% 0;
   transform: rotate(15deg);
 }
