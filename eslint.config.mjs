@@ -18,7 +18,8 @@ export default [
     rules: {
       "no-console": "warn", // コンソール使用を警告に設定
       "vue/no-unused-vars": "error", // 未使用変数をエラーに設定
-      "no-unused-expressions": "error" // 未使用の式をエラーに設定
+      "no-unused-expressions": "error", // 未使用の式をエラーに設定
+      "prefer-const": "error" // 追加ルール
     },
   },
 ];
