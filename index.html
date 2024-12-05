@@ -7,7 +7,6 @@
     <meta name="description" content="Put your description here." />
     <title>My Site</title>
 
-    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="src/img/sakura.webp"
@@ -15,7 +14,6 @@
       sizes="16x16"
     />
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="src/css/style.css" />
     <link
       rel="preload"
@@ -29,13 +27,13 @@
       href="src/font/Pommel.woff"
       as="font"
       type="font/woff"
-      crossorigin />
+      crossorigin 
+    />
   </head>
 
   <body>
     <div class="cherry-blossom">
       <main class="menu">
-        <!-- App 1 -->
         <div id="app1">
           <a class="button" v-on:click="show('modal-1')">About</a>
           <modal name="modal-1" :adaptive="true" :delay="368">
@@ -47,7 +45,6 @@
             </div>
           </modal>
         </div>
-        <!-- App 2 -->
         <div id="app2">
           <a class="button" v-on:click="show('modal-2')">Skill</a>
           <modal name="modal-2" :adaptive="true" :delay="368">
@@ -60,7 +57,6 @@
             </div>
           </modal>
         </div>
-        <!-- App 3 -->
         <div id="app3">
           <a class="button" v-on:click="show('modal-3')">Link</a>
           <modal name="modal-3" :adaptive="true" :delay="368">
@@ -90,7 +86,6 @@
             </div>
           </modal>
         </div>
-        <!-- App 4 -->
         <div id="app4">
           <a class="button" v-on:click="show('modal-4')">Contact</a>
           <modal name="modal-4" :adaptive="true" :delay="368">
@@ -106,8 +101,6 @@
         <small>Made by ogmer</small>
       </footer>
     </div>
-
-    <!-- Load scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.9/dist/vue.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-js-modal@1.3.35/dist/index.min.js" defer></script>
