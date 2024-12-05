@@ -34,6 +34,7 @@
   <body>
     <!-- sakura -->
     <div class="cherry-blossom">
+      <div v-for="sakura in sakuraElements" :key="sakura.id" class="sakura" :style="sakura.style"></div>
       <main class="menu" v-cloak>
         <!-- app1 -->
         <div id="app1">
@@ -111,7 +112,6 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.9/dist/vue.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="src/js/index.js" defer></script>
   </body>
 </html>
