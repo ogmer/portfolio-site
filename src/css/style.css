@@ -110,10 +110,13 @@ p {
   z-index: 1000;
 }
 
-.modal-fade-enter-active, .modal-fade-leave-active {
+.modal-fade-enter-active,
+.modal-fade-leave-active {
   transition: opacity 0.5s;
 }
-.modal-fade-enter, .modal-fade-leave-to {
+
+.modal-fade-enter,
+.modal-fade-leave-to {
   opacity: 0;
 }
 
