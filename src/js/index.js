@@ -39,16 +39,24 @@ $(document).ready(() => {
 });
 
 // Modal management
-Vue.use(window["vue-js-modal"].default);
-
 new Vue({
   el: ".menu",
+  data: {
+    showModal1: false,
+    showModal2: false,
+    showModal3: false,
+    showModal4: false,
+  },
   methods: {
-    show(modalId) {
-      this.$modal.show(modalId);
+    showModal(modalId) {
+      const modalNumber = modalId.replace('modal', '');
+      this['showModal' + modalNumber] = true;
+      console.log(`Opened modal${modalNumber}`);
     },
-    hide(modalId) {
-      this.$modal.hide(modalId);
+    hideModal(modalId) {
+      const modalNumber = modalId.replace('modal', '');
+      this['showModal' + modalNumber] = false;
+      console.log(`Closed modal${modalNumber}`);
     },
   },
 });
