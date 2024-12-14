@@ -8,7 +8,8 @@
     "format": "prettier --write src/**/*.{js,css,html}",
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "build:css": "postcss src/css/style.css -o dist/css/style.css"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -20,7 +21,9 @@
     "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-vue": "^9.27.0",
     "globals": "^15.9.0",
-    "postcss": "^8.4.49",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-nested": "^6.0.1",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.16",
     "webpack": "^5.88.0",
