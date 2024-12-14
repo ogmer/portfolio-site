@@ -48,9 +48,11 @@ new Vue({
       const sakura = { id: Date.now(), style: sakuraStyle };
       this.sakuraElements.push(sakura);
 
-      setTimeout(() => {
-        this.sakuraElements = this.sakuraElements.filter(el => el.id !== sakura.id);
-      }, this.sakuraConfig.animationDuration);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          this.sakuraElements = this.sakuraElements.filter(el => el.id !== sakura.id);
+        }, this.sakuraConfig.animationDuration);
+      });
     },
     startSakura() {
       this.sakuraInterval = setInterval(this.createSakura, this.sakuraConfig.createInterval);
