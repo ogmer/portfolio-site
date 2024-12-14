@@ -1,28 +1,27 @@
-new Vue({
-  el: ".cherry-blossom",
-  data: {
-    showModal1: false,
-    showModal2: false,
-    showModal3: false,
-    showModal4: false,
-    sakuraConfig: {
-      minSize: 10,
-      maxSize: 15,
-      animationDuration: 10000,
-      createInterval: 300,
-    },
-    sakuraElements: [],
+const app = Vue.createApp({
+  data() {
+    return {
+      showModal1: false,
+      showModal2: false,
+      showModal3: false,
+      showModal4: false,
+      sakuraConfig: {
+        minSize: 10,
+        maxSize: 15,
+        animationDuration: 10000,
+        createInterval: 300,
+      },
+      sakuraElements: [],
+    };
   },
   methods: {
     showModal(modalId) {
       const modalNumber = modalId.replace('modal', '');
-      this['showModal' + modalNumber] = true;
-      console.log(`Opened modal${modalNumber}`);
+      this[`showModal${modalNumber}`] = true;
     },
     hideModal(modalId) {
       const modalNumber = modalId.replace('modal', '');
-      this['showModal' + modalNumber] = false;
-      console.log(`Closed modal${modalNumber}`);
+      this[`showModal${modalNumber}`] = false;
     },
     createSakura() {
       if (this.sakuraElements.length >= 100) return;
@@ -61,7 +60,9 @@ new Vue({
   mounted() {
     this.startSakura();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.stopSakura();
   },
 });
+
+app.mount('.cherry-blossom');
