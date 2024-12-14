@@ -12,7 +12,7 @@
 /* common-style */
 @font-face {
   font-family: "Pommel";
-  src: url(../font/Pommel.woff2);
+  src: url(../../public/Pommel.woff2);
 }
 
 html,
