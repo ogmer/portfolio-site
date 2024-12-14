@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #77a9eb;
-  --text-color: #f1f3fc;
+  --text-color: #ffffff;
   --link-color: #2ecc71;
   --heading-color: #f39c06;
   --sakura-color: #ffc0cb;
@@ -34,6 +34,7 @@ a {
   letter-spacing: 0.08em;
   color: var(--text-color);
   transition: color var(--animation-duration) ease;
+  outline: none;
 }
 
 a:hover {
@@ -157,6 +158,7 @@ small {
   border-radius: 150% 0 150% 0;
   animation: animate-sakura var(--animation-duration) linear;
   will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 .sakura::after {
@@ -217,4 +219,9 @@ small {
   .menu {
     flex-direction: column;
   }
+}
+
+.button:focus-visible {
+  outline: 3px solid #4299e1;
+  outline-offset: 2px;
 }

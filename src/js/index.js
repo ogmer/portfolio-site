@@ -1,9 +1,3 @@
-const SAKURA_CONFIG = {
-  minSize: 10,
-  maxSize: 15,
-  animationDuration: 10000,
-  createInterval: 300,
-};
 new Vue({
   el: ".cherry-blossom",
   data: {
@@ -31,6 +25,8 @@ new Vue({
       console.log(`Closed modal${modalNumber}`);
     },
     createSakura() {
+      if (this.sakuraElements.length >= 100) return;
+
       const size =
         Math.random() * (this.sakuraConfig.maxSize - this.sakuraConfig.minSize) +
         this.sakuraConfig.minSize;
@@ -43,6 +39,7 @@ new Vue({
         left: `${positionX}px`,
         top: `${positionY}px`,
         animationDuration: `${this.sakuraConfig.animationDuration}ms`,
+        transform: 'translateZ(0)',
       };
 
       const sakura = { id: Date.now(), style: sakuraStyle };

@@ -10,7 +10,7 @@
     <link
       rel="shortcut icon"
       href="src/img/sakura.webp"
-      type="image/png"
+      type="image/webp"
       sizes="16x16"
     />
 
@@ -22,13 +22,6 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="src/font/Pommel.woff"
-      as="font"
-      type="font/woff"
-      crossorigin
-    />
   </head>
 
   <body>
@@ -38,7 +31,12 @@
       <main class="menu" v-cloak>
         <!-- app1 -->
         <div id="app1">
-          <a class="button" v-on:click="showModal('modal1')">About</a>
+          <a class="button" 
+             v-on:click="showModal('modal1')"
+             href="#"
+             role="link"
+             tabindex="0"
+             >About</a>
           <transition name="modal-fade">
             <div v-if="showModal1" class="modal" v-on:click="hideModal('modal1')">
               <div class="modal-inner" v-on:click.stop>
@@ -52,7 +50,12 @@
         
         <!-- app2 -->
         <div id="app2">
-          <a class="button" v-on:click="showModal('modal2')">Skill</a>
+          <a class="button" 
+             v-on:click="showModal('modal2')"
+             href="#"
+             role="link"
+             tabindex="0"
+             >Skill</a>
           <transition name="modal-fade">
             <div v-if="showModal2" class="modal" v-on:click="hideModal('modal2')">
               <div class="modal-inner" v-on:click.stop>
@@ -67,7 +70,12 @@
         
         <!-- app3 -->
         <div id="app3">
-          <a class="button" v-on:click="showModal('modal3')">Link</a>
+          <a class="button" 
+             v-on:click="showModal('modal3')"
+             href="#"
+             role="link"
+             tabindex="0"
+             >Link</a>
           <transition name="modal-fade">
             <div v-if="showModal3" class="modal" v-on:click="hideModal('modal3')">
               <div class="modal-inner" v-on:click.stop>
@@ -96,7 +104,12 @@
         
         <!-- app4 -->
         <div id="app4">
-          <a class="button" v-on:click="showModal('modal4')">Contact</a>
+          <a class="button" 
+             v-on:click="showModal('modal4')"
+             href="#"
+             role="link"
+             tabindex="0"
+             >Contact</a>
           <transition name="modal-fade">
             <div v-if="showModal4" class="modal" v-on:click="hideModal('modal4')">
               <div class="modal-inner" v-on:click.stop>
