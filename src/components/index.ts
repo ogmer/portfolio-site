@@ -39,14 +39,20 @@ const app = createApp(
     },
     methods: {
       showModal(modalId: string) {
-        const modalNumber = modalId.replace("modal", "") as "1" | "2" | "3" | "4"
+        const modalNumber = modalId.replace("modal", "") as
+          | "1"
+          | "2"
+          | "3"
+          | "4"
         const key = `showModal${modalNumber}` as keyof ComponentState
-        this[key] = true
       },
       hideModal(modalId: string) {
-        const modalNumber = modalId.replace("modal", "") as "1" | "2" | "3" | "4"
+        const modalNumber = modalId.replace("modal", "") as
+          | "1"
+          | "2"
+          | "3"
+          | "4"
         const key = `showModal${modalNumber}` as keyof ComponentState
-        this[key] = false
       },
       createSakura() {
         if (this.sakuraElements.length >= 100) return
