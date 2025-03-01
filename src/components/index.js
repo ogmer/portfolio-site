@@ -1,66 +1,74 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var vue_1 = require("vue");
-var app = (0, vue_1.createApp)({
-    data: function () {
-        return {
-            showModal1: false,
-            showModal2: false,
-            showModal3: false,
-            showModal4: false,
-            sakuraConfig: {
-                minSize: 10,
-                maxSize: 15,
-                animationDuration: 10000,
-                createInterval: 300,
-            },
-            sakuraElements: [],
-        };
+const app = Vue.createApp({
+  data() {
+    return {
+      showModal1: false,
+      showModal2: false,
+      showModal3: false,
+      showModal4: false,
+      sakuraConfig: {
+        minSize: 10,
+        maxSize: 15,
+        animationDuration: 10000,
+        createInterval: 300,
+      },
+      sakuraElements: [],
+    }
+  },
+  methods: {
+    showModal(modalId) {
+      const modalNumber = modalId.replace("modal", "")
+      this[`showModal${modalNumber}`] = true
     },
-    methods: {
-        showModal: function (modalId) {
-            var modalNumber = modalId.replace('modal', '');
-            this["showModal".concat(modalNumber)] = true;
-        },
-        hideModal: function (modalId) {
-            var modalNumber = modalId.replace('modal', '');
-            this["showModal".concat(modalNumber)] = false;
-        },
-        createSakura: function () {
-            var _this = this;
-            if (this.sakuraElements.length >= 100)
-                return;
-            var size = Math.random() * (this.sakuraConfig.maxSize - this.sakuraConfig.minSize) + this.sakuraConfig.minSize;
-            var positionX = Math.random() * window.innerWidth;
-            var positionY = Math.random() * window.innerHeight;
-            var sakuraStyle = {
-                width: "".concat(size, "px"),
-                height: "".concat(size, "px"),
-                left: "".concat(positionX, "px"),
-                top: "".concat(positionY, "px"),
-                animationDuration: "".concat(this.sakuraConfig.animationDuration, "ms"),
-                transform: 'translateZ(0)',
-            };
-            var sakura = { id: Date.now(), style: sakuraStyle };
-            this.sakuraElements.push(sakura);
-            requestAnimationFrame(function () {
-                setTimeout(function () {
-                    _this.sakuraElements = _this.sakuraElements.filter(function (el) { return el.id !== sakura.id; });
-                }, _this.sakuraConfig.animationDuration);
-            });
-        },
-        startSakura: function () {
-            this.sakuraInterval = setInterval(this.createSakura, this.sakuraConfig.createInterval);
-        },
-        stopSakura: function () {
-            clearInterval(this.sakuraInterval);
-        },
+    hideModal(modalId) {
+      const modalNumber = modalId.replace("modal", "")
+      this[`showModal${modalNumber}`] = false
     },
-    mounted: function () {
-        this.startSakura();
+    createSakura() {
+      if (this.sakuraElements.length >= 100) return
+
+      const size =
+        Math.random() *
+          (this.sakuraConfig.maxSize - this.sakuraConfig.minSize) +
+        this.sakuraConfig.minSize
+      const positionX = Math.random() * window.innerWidth
+      const positionY = Math.random() * window.innerHeight
+
+      const sakuraStyle = {
+        width: `${size}px`,
+        height: `${size}px`,
+        left: `${positionX}px`,
+        top: `${positionY}px`,
+        animationDuration: `${this.sakuraConfig.animationDuration}ms`,
+        transform: "translateZ(0)",
+      }
+
+      const sakura = { id: Date.now(), style: sakuraStyle }
+      this.sakuraElements.push(sakura)
+
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          this.sakuraElements = this.sakuraElements.filter(
+            (el) => el.id !== sakura.id
+          )
+        }, this.sakuraConfig.animationDuration)
+      })
     },
-    beforeUnmount: function () {
-        this.stopSakura();
+    startSakura() {
+      this.sakuraInterval = setInterval(
+        this.createSakura,
+        this.sakuraConfig.createInterval
+      )
     },
-});
-app.mount('.cherry-blossom');
+    stopSakura() {
+      clearInterval(this.sakuraInterval)
+    },
+  },
+  mounted() {
+    this.startSakura()
+  },
+  beforeUnmount() {
+    this.stopSakura()
+  },
+})
+
+app.mount(".cherry-blossom")
