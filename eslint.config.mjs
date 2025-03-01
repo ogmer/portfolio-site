@@ -8,7 +8,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
-        jQuery: "readonly", // グローバル変数jQueryを追加
+        jQuery: "readonly",
       },
     },
   },
