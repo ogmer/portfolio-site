@@ -1,5 +1,5 @@
 
-# ogmer portfolio site
+# portfolio site
 
 deploy by Netlify<br><br>
 https://ogmer.netlify.app/<br><br>
