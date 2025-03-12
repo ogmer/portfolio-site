@@ -28,18 +28,29 @@
   <body>
     <!-- sakura -->
     <div class="cherry-blossom">
-      <div v-for="sakura in sakuraElements" :key="sakura.id" class="sakura" :style="sakura.style"></div>
+      <div
+        v-for="sakura in sakuraElements"
+        :key="sakura.id"
+        class="sakura"
+        :style="sakura.style"
+      ></div>
       <main class="menu" v-cloak>
         <!-- app1 -->
         <div id="app1">
-          <a class="button" 
-             v-on:click="showModal('modal1')"
-             href="#"
-             role="link"
-             tabindex="0"
-             >About</a>
+          <a
+            class="button"
+            @click.prevent="showModal('modal1', $event)"
+            href="#"
+            role="link"
+            tabindex="0"
+            >About</a
+          >
           <transition name="modal-fade">
-            <div v-if="showModal1" class="modal" v-on:click="hideModal('modal1')">
+            <div
+              v-if="showModal1"
+              class="modal"
+              @click.self="hideModal('modal1', $event)"
+            >
               <div class="modal-inner" v-on:click.stop>
                 <h1>About</h1>
                 <p>東京にて暮らしてます</p>
@@ -48,37 +59,51 @@
             </div>
           </transition>
         </div>
-        
+
         <!-- app2 -->
         <div id="app2">
-          <a class="button" 
-             v-on:click="showModal('modal2')"
-             href="#"
-             role="link"
-             tabindex="0"
-             >Skill</a>
+          <a
+            class="button"
+            @click.prevent="showModal('modal2', $event)"
+            href="#"
+            role="link"
+            tabindex="0"
+            >Skill</a
+          >
           <transition name="modal-fade">
-            <div v-if="showModal2" class="modal" v-on:click="hideModal('modal2')">
+            <div
+              v-if="showModal2"
+              class="modal"
+              @click.self="hideModal('modal2', $event)"
+            >
               <div class="modal-inner" v-on:click.stop>
                 <h1>Skill</h1>
                 <h2>得意言語: Java, C++</h2>
                 <h2>扱える言語: Python, JavaScript, SQL</h2>
-                <h2>本業のバックエンドと<br />趣味でフロントエンド開発をやっています</h2>
+                <h2>
+                  本業のバックエンドと<br />趣味でフロントエンド開発をやっています
+                </h2>
               </div>
             </div>
           </transition>
         </div>
-        
+
         <!-- app3 -->
         <div id="app3">
-          <a class="button" 
-             v-on:click="showModal('modal3')"
-             href="#"
-             role="link"
-             tabindex="0"
-             >Link</a>
+          <a
+            class="button"
+            @click.prevent="showModal('modal3', $event)"
+            href="#"
+            role="link"
+            tabindex="0"
+            >Link</a
+          >
           <transition name="modal-fade">
-            <div v-if="showModal3" class="modal" v-on:click="hideModal('modal3')">
+            <div
+              v-if="showModal3"
+              class="modal"
+              @click.self="hideModal('modal3', $event)"
+            >
               <div class="modal-inner" v-on:click.stop>
                 <h1>Link</h1>
                 <div class="bold">
@@ -86,33 +111,42 @@
                     href="https://github.com/ogmer"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >GitHub</a>
+                    >GitHub</a
+                  >
                   <a
                     href="https://qiita.com/ogmer"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >Qiita</a>
+                    >Qiita</a
+                  >
                   <a
                     href="https://zenn.dev/ogmer"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >Zenn</a>
+                    >Zenn</a
+                  >
                 </div>
               </div>
             </div>
           </transition>
         </div>
-        
+
         <!-- app4 -->
         <div id="app4">
-          <a class="button" 
-             v-on:click="showModal('modal4')"
-             href="#"
-             role="link"
-             tabindex="0"
-             >Contact</a>
+          <a
+            class="button"
+            @click.prevent="showModal('modal4', $event)"
+            href="#"
+            role="link"
+            tabindex="0"
+            >Contact</a
+          >
           <transition name="modal-fade">
-            <div v-if="showModal4" class="modal" v-on:click="hideModal('modal4')">
+            <div
+              v-if="showModal4"
+              class="modal"
+              @click.self="hideModal('modal4', $event)"
+            >
               <div class="modal-inner" v-on:click.stop>
                 <h1>Contact</h1>
                 <h2>ogmer.net〔at〕gmail.com</h2>
@@ -121,7 +155,7 @@
           </transition>
         </div>
       </main>
-      <footer>  
+      <footer>
         <small>Made by ogmer</small>
       </footer>
     </div>
