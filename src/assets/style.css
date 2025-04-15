@@ -9,12 +9,6 @@
   --animation-duration: 0.45s;
 }
 
-/* common-style */
-@font-face {
-  font-family: "Pommel";
-  src: url(../../public/Pommel.woff2);
-}
-
 html,
 body {
   width: 100%;
@@ -140,7 +134,10 @@ footer {
 small {
   font-size: 35px;
   color: white;
-  font-family: "Pommel";
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-weight: 1;
+  line-height: 1.8em;
+  letter-spacing: -0.15em;
 }
 
 .cherry-blossom {
