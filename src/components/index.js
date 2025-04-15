@@ -15,13 +15,11 @@ const app = Vue.createApp({
     }
   },
   methods: {
-    showModal(modalId, event) {
-      event.preventDefault()
+    showModal(modalId) {
       const modalNumber = modalId.replace("modal", "")
       this[`showModal${modalNumber}`] = true
     },
-    hideModal(modalId, event) {
-      if (event) event.preventDefault()
+    hideModal(modalId) {
       const modalNumber = modalId.replace("modal", "")
       this[`showModal${modalNumber}`] = false
     },
