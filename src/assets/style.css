@@ -132,9 +132,9 @@ footer {
 }
 
 small {
-  font-size: 35px;
+  font-size: 29px;
   color: white;
-  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
   font-weight: 1;
   line-height: 1.8em;
   letter-spacing: -0.15em;
