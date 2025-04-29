@@ -10,8 +10,10 @@ const app = Vue.createApp({
         maxSize: 15,
         animationDuration: 10000,
         createInterval: 300,
+        maxElements: 50,
       },
       sakuraElements: [],
+      sakuraInterval: null,
     }
   },
   methods: {
@@ -24,7 +26,7 @@ const app = Vue.createApp({
       this[`showModal${modalNumber}`] = false
     },
     createSakura() {
-      if (this.sakuraElements.length >= 100) return
+      if (this.sakuraElements.length >= this.sakuraConfig.maxElements) return
 
       const size =
         Math.random() *
@@ -40,6 +42,7 @@ const app = Vue.createApp({
         top: `${positionY}px`,
         animationDuration: `${this.sakuraConfig.animationDuration}ms`,
         transform: "translateZ(0)",
+        willChange: "transform",
       }
 
       const sakura = { id: Date.now(), style: sakuraStyle }
@@ -54,13 +57,17 @@ const app = Vue.createApp({
       })
     },
     startSakura() {
+      if (this.sakuraInterval) return
       this.sakuraInterval = setInterval(
         this.createSakura,
         this.sakuraConfig.createInterval
       )
     },
     stopSakura() {
-      clearInterval(this.sakuraInterval)
+      if (this.sakuraInterval) {
+        clearInterval(this.sakuraInterval)
+        this.sakuraInterval = null
+      }
     },
   },
   mounted() {
